@@ -1,0 +1,11 @@
+# Folder node_modules
+node_modules/
+
+# Folder dist
+dist/
+
+# File package-lock.json
+package-lock.json
+
+# Environment variables
+.env
