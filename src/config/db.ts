@@ -6,7 +6,11 @@ export const connectDB = async () => {
     const url = `${connection.host}:${connection.port}`
     console.log(`MongoDB connected: ${url}`)
   } catch (error) {
-    console.log('MongoDB connection error:', error)
+    if (error instanceof Error) {
+      console.log(error.message)
+    } else {
+      console.log('An unknown error occurred')
+    }
     process.exit(1)
   }
 }
